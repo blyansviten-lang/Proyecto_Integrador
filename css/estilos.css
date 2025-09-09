@@ -1,0 +1,31 @@
+ body {
+            background-color: 0000; /* por el momento lo dejaremos en blanco mientras le quitamos el fondo al logo y pensamos que color quedaria bien para el backgrond */
+        }
+        header {
+            text-align: center; /* Si les gustaria que lo pusieramos centrado en todo o mejor corrido a un solo lado me avisan */
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+            font-size: 18px;
+            color: #5464bf;
+        }
+        nav {
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: #5464bf;
+        }
+        a:hover {
+            color: #F20CA2;
+        }
+        h2 {
+            font-size: 50px;
+            color: #5464bf;
+        }
+        footer { 
+            background-color: black;
+            color: #5464bf;
+            text-align: center;
+        }
