@@ -1,31 +1,310 @@
- body {
-            background-color: 0000; /* por el momento lo dejaremos en blanco mientras le quitamos el fondo al logo y pensamos que color quedaria bien para el backgrond */
-        }
-        header {
-            text-align: center; /* Si les gustaria que lo pusieramos centrado en todo o mejor corrido a un solo lado me avisan */
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
-            font-size: 18px;
-            color: #5464bf;
-        }
-        nav {
-            text-align: center;
-        }
-        a {
-            text-decoration: none;
-            color: #5464bf;
-        }
-        a:hover {
-            color: #F20CA2;
-        }
-        h2 {
-            font-size: 50px;
-            color: #5464bf;
-        }
-        footer { 
-            background-color: black;
-            color: #5464bf;
-            text-align: center;
-        }
+
+
+:root {
+    /* Paleta de Colores */
+    --color-pink-soft: #F2A7AD;
+    --color-magenta-bright: #F20CA2;
+    --color-blue-primary: #5464BF;
+    --color-yellow-vibrant: #F2E205;
+    --color-orange-vibrant: #F27405;
+    
+    /* Colores base */
+    --color-text-dark: #333;
+    --color-text-light: #ffffff;
+    --color-background-light: #f4f4f9;
+}
+
+/* Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
+}
+
+.header {
+    background-color: var(--color-blue-primary);
+    padding: 1rem 5%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    color: var(--color-yellow-vibrant);
+    font-weight: 700;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0.5rem 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--color-magenta-bright);
+    color: var(--color-blue-primary);
+    transform: translateY(-2px);
+}
+
+
+.main-content {
+    padding: 0; 
+}
+
+
+.section-details {
+    padding: 4rem 5%;
+    min-height: 80vh; 
+}
+
+.section-dark-bg {
+    background-color: var(--color-text-dark); /* Fondo oscuro  */
+    color: var(--color-text-light);
+}
+
+.section-light-bg {
+    background-color: var(--color-background-light); /* Fondo claro */
+    color: var(--color-text-dark);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--color-magenta-bright);
+}
+
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-orange-vibrant);
+    color: var(--color-text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #d66100; 
+    transform: translateY(-2px);
+}
+
+
+.section-hero {
+    background-color: var(--color-blue-primary);
+    color: var(--color-text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 5%;
+    gap: 40px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: var(--color-pink-soft);
+}
+
+.gif-placeholder {
+    width: 90%;
+    max-width: 400px;
+    height: 200px;
+    background-color: var(--color-pink-soft);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-text-dark);
+    font-weight: 500;
+}
+
+
+.article-card {
+    background-color: var(--color-blue-primary); 
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.article-card p {
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
+}
+
+.quote-box {
+    background-color: var(--color-magenta-bright); 
+    padding: 1.5rem;
+    border-left: 5px solid var(--color-yellow-vibrant);
+    border-radius: 0 10px 10px 0;
+    text-align: center;
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-text-light);
+}
+
+/* Estilos para la cuadrícula de Objetivos */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+.goal-card {
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.goal-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-magenta {
+    background-color: var(--color-magenta-bright);
+    color: var(--color-text-light);
+}
+
+.card-orange {
+    background-color: var(--color-orange-vibrant);
+    color: var(--color-text-light);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--color-yellow-vibrant); 
+}
+
+/* Estilos del Formulario de Contacto */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 2rem;
+    background-color: var(--color-blue-primary);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: var(--color-orange-vibrant);
+    outline: none;
+}
+
+.ya {
+    text-align: center;
+}
+
+
+.footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-pink-soft);
+    text-align: center;
+    padding: 1.5rem 5%;
+    font-size: 0.9rem;
+}
+
+
+
+
+@media (min-width: 768px) {
+    
+    /* Header/Nav: Cambiar a modo horizontal */
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-list {
+        gap: 30px;
+    }
+    
+
+    .section-hero {
+        flex-direction: row;
+        text-align: left;
+        padding: 8rem 5%;
+    }
+    
+    .hero-content {
+        flex: 1;
+    }
+    
+    .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .gif-placeholder {
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -5,35 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educación de Calidad</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
 </head>
 <body>
-    <header>
-            <img src="img/logo.png" alt="logo" width="150px">
-    </header>
-    <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#que">¿Que es?</a></li>
-                <li><a href="#obje">Objetivo</a></li>
-                <li><a href="#cont">Contactanos</a></li>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="logo" width="60%">
+        </div>
+        
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#que-es" class="nav-link">¿Qué es?</a></li>
+                <li><a href="#objetivo" class="nav-link">Objetivo</a></li>
+                <li><a href="#contacto" class="nav-link">Contáctanos</a></li>
             </ul>
-    </nav>
-    <main>
-        <section class="ini">
-                <h1>Gif</h1> <!-- Colocaremos un gif creado por nosotros para la bienvenida al sitio -->
+        </nav>
+    </header>
+
+
+    <main class="main-content">
+        
+        <section id="inicio" class="section-hero">
+            <div class="hero-content">
+                <h2 class="hero-title">Educación de Calidad: La Meta de un Desarrollo Sostenible</h2>
+                <p class="hero-subtitle">Una presentación de los estudiantes para la Técnica en Desarrollo de Software.</p>
+                <a href="#que-es" class="btn-primary">¡Empecemos!</a>
+            </div>
+            <div class="hero-image">
+                <!-- Por ahora, pondré un placeholder, pero aquí pondremos un GIF que realmente no sé cual poner -->
+                <div class="gif-placeholder">
+                    <p>Espacio para un GIF o Imagen <br/> (personas estudiando, un logro).</p>
+                </div>
+            </div>
         </section>
-        <section class="que">
-                <h2>¿Que es?</h2>
+
+        <section id="que-es" class="section-details section-dark-bg">
+            <h3 class="section-title">¿Qué Buscamos?</h3>
+            <article class="article-card">
+                <p>La meta de la <b>Educación de Calidad</b> es clara: "Garantizar una educación inclusiva, equitativa y de calidad y promover oportunidades de aprendizaje durante toda la vida para todos."</p>
+                <p>Esto no solo implica tener acceso a la escuela, sino asegurar que la educación sea <b>relevante y efectiva</b>. Se centra en eliminar las disparidades de género y económicas, y en asegurar que todos los jóvenes adquieran conocimientos técnicos y profesionales esenciales.</p>
+            </article>
+            <div class="quote-box">
+                <p class="quote-text">"La educación es el motor más poderoso y probado para garantizar el desarrollo sostenible."</p>
+            </div>
         </section>
-        <section class="obje">
-                <h2>Objetivo</h2>
+
+        <section id="objetivo" class="section-details section-light-bg">
+            <h3 class="section-title">Nuestros Objetivos Específicos (Según la UN)</h3>
+            <div class="grid-container">
+                <div class="goal-card card-magenta">
+                    <h4 class="card-title">Meta 4.1</h4>
+                    <p>Asegurar que todas las niñas y todos los niños terminen la enseñanza primaria y secundaria gratuita, equitativa y de calidad.</p>
+                </div>
+                <div class="goal-card card-orange">
+                    <h4 class="card-title">Meta 4.4</h4>
+                    <p>Aumentar el número de jóvenes y adultos que tienen las competencias necesarias (técnicas y profesionales) para el empleo.</p>
+                </div>
+                <div class="goal-card card-magenta">
+                    <h4 class="card-title">Meta 4.7</h4>
+                    <p>Asegurar que todos los alumnos adquieran los conocimientos teóricos y prácticos para promover el desarrollo sostenible.</p>
+                </div>
+            </div>
         </section>
-        <section class="cont">
-                <h2>Contactanos </h2> <!-- Hacemos un formulario -->
+
+        <section id="contacto" class="section-details section-dark-bg">
+            <h3 class="section-title">Contáctanos</h3>
+            <p class="ya">Su experiencia es muy valiosa para nosotros. Por favor, deje sus comentarios a continuación.</p>
+            <form class="contact-form">
+                <input type="text" class="form-input" placeholder="Tu Nombre Completo (o el del profesor)" required>
+                <input type="email" class="form-input" placeholder="Correo Electrónico" required>
+                <textarea class="form-input" rows="5" placeholder="Tus Comentarios sobre la Presentación..." required></textarea>
+                <button type="submit" class="btn-primary">Enviar Comentario</button>
+            </form>
         </section>
+
     </main>
-    <footer>
-        lo normal del footer
+
+    <footer class="footer">
+        <p class="footer-text">Proyecto Final CESDE - Desarrollo de Software | Equipo BAMKB | Primer Semestre</p>
     </footer>
+
 </body>
 </html>
